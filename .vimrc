@@ -1,5 +1,3 @@
-
-
 syntax enable                " enable syntax highlighting
 set number                   " display line numbers
 set cursorline               " highlight current line
@@ -24,4 +22,3 @@ set foldnestmax=10           " maximum 10 nested folds (within folds)
 set foldmethod=indent        " fold based on indent level
 " space toggles fold open/close
 nnoremap <space> za
-# dotfiles
