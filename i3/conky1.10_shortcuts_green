@@ -1,0 +1,70 @@
+conky.config = {
+	alignment = 'bottom_left',
+	background = true,
+	color2 = '#969696',
+    cpu_avg_samples = 2,
+    default_color = '#5F8686',
+    double_buffer = true,
+    font = 'Droid Sans Mono:style=Bold:size=10',
+    draw_shades = false,
+    gap_x = 25,
+	gap_y = 45,
+	minimum_width = 200,
+	no_buffers = true,
+	own_window = true,
+	own_window_type = 'override',
+	own_window_transparent = true,
+    update_interval = 2.0,
+	use_xft = true,
+}
+conky.text = [[
+${color2}// SERVER
+${color}ssh -l lex -p 2222 localhost
+localhost:8080/pagename.html
+/var/www/html/
+
+${color2}// SQL
+${color}mysql -u root
+show databases;
+use database ...;
+show tables;
+describe table ...;
+select * from ...;
+
+${color2}// NAVIGATION  
+${color}0 - ${color2}move cursor to the beginning of line
+${color}[dollar] - ${color2}moves cursor to the end of line
+${color}w - ${color2}move forward one word (cursor on start)
+${color}10w - ${color2}move 10 words forward (same principle with others)
+${color}e - ${color2}move forward one word (cursor on end)
+${color}b - ${color2}move backward one word
+${color}G - ${color2}move to the end of the file
+${color}gg - ${color2}move to the beginning of the file
+${color}`. - ${color2}move to the last edit
+${color}^d - ${color2}move back to start of line that was auto-indented
+
+// DELETE(CUT) 
+${color}d - ${color2}starts the delete operation
+${color}dw - ${color2}delete a word
+${color}d0 - ${color2}delete to the beginning of a line
+${color}d[dollar] - ${color2}delete to the end of a line
+${color}dgg - ${color2}delete to the beginning of the file
+${color}dG - ${color2}delete to the end of the file
+
+// SEARCH 
+${color}/text - ${color2}search for text going forward
+${color}?text - ${color2}search for text going backwards
+${color}n - ${color2}move cursor to the next instance of search results
+${color}N - ${color2}move cursor to the previous instance of search results
+${color}:nohlsearch - ${color2}turn off search result highlighting when done
+${color}:s/search/replace - ${color2}find and replace
+
+// OTHER 
+${color}u - ${color2}undo
+${color}Ctrl-r - ${color2}redo
+
+${color}zi - ${color2}toggle folding
+${color}<space>/za - ${color2}fold/unfold a section 
+
+${color}:set wrap/:set nowrap - ${color2}toggle text wrapping 
+]]
