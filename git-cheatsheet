@@ -1,0 +1,12 @@
+# File location
+~/.gitconfig
+
+# Initial setup
+git config --global user.name  "user"
+git config --global user.email "user@email.com"
+git config --global core.editor vim
+
+# Check settings
+git config --list
+
+#tbc
