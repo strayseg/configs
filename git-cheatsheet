@@ -9,4 +9,8 @@ git config --global core.editor vim
 # Check settings
 git config --list
 
-#tbc
+# If planning to use https(as opposed to ssh) to clone, make git remember your password
+git config --global credential.helper cache
+
+# Set how long the password is saved for (in seconds). 3600=1hr
+git config --global credential.helper 'cache --timeout=3600'
